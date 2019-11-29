@@ -18,6 +18,5 @@ def login(request):
         if(pwd == password):
             return render(request,"index.html")
         else:
-            error_msg = "您输入的用户名或密码错误"
             return render(request,"login.html",{"error_msg":error_msg})
     return render(request,"login.html")
